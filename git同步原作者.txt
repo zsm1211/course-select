@@ -1,0 +1,15 @@
+保证自己的项目与原作者同步
+
+git clone https://github.com/wqs123/CourseSelect.git
+
+
+git remote add jrt https://github.com/RongtongJin/CourseSelect.git
+
+
+git fetch jrt
+
+
+git merge jrt/master
+
+
+git push origin master

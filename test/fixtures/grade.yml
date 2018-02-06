@@ -1,0 +1,26 @@
+gradeone:
+  course: one
+  user: rongtongjin
+  grade: 60
+
+gradethree:
+  course: three
+  user: rongtongjin
+
+<% 15.times do |n| %>
+grade_<%= n %>:
+  course: one
+  user: <%= "student_#{n}" %>
+<% end %>
+
+<% (15...29).each do |n| %>
+grade_<%= n %>:
+  course: two
+  user: <%= "student_#{n}" %>
+<% end %>
+
+<% (30...44).each do |n| %>
+grade_<%= n %>:
+  course: three
+  user: <%= "student_#{n}" %>
+<% end %>

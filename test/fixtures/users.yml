@@ -1,0 +1,42 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+michael:
+  name: 彭兆卿
+  email: student1@test.com
+  admin: true
+  password_digest: <%= User.digest('password') %>
+
+rongtongjin:
+  name: 金融通
+  email: rongtongjin@gmail.com
+  num: 201628015007
+  major: 计算机软件与理论
+  department: 软件研究所
+  password_digest: <%= User.digest('password') %>
+
+teacherluo:
+  name: 罗铁坚
+  email: teacher4@test.com
+  teacher: true
+  department: 计算机与控制学院
+  password_digest: <%= User.digest('password') %>
+
+teacherhu:
+  name: 胡伟武
+  email: teacher5@test.com
+  teacher: true
+  department: 计算机与控制学院
+  password_digest: <%= User.digest('password') %>
+
+<% (0..45).each do |n| %>
+student_<%= n %>:
+  name: <%= "user#{n}" %>
+  email: <%= "user#{n}@example.com" %>
+  department: 计算机与控制学院
+  password_digest: <%= User.digest('password') %>
+<% end %>

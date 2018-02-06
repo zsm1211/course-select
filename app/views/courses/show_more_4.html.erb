@@ -1,0 +1,68 @@
+<div class="col-md-offset-1 col-sm-10">
+  <div class="panel panel-default ">
+    <div class="panel-body">
+      <h3 class="text-center"><%= @course.name %></h3>
+    </div>
+  </div>
+</div>
+<div class="panel-group" id="accordion">
+  <div class="col-md-offset-1 col-sm-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <span class="glyphicon glyphicon-align-justify" style="font-size:20px;color:primary">课程大纲</span>
+        </a>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <ul class="nav nav-tabs nav-justified">
+            <li ><%= link_to "课程详细信息" ,show_more_1_course_path(@course)%></li>
+            <li ><%= link_to "课程章节安排" ,show_more_2_course_path(@course)%></li>
+            <li><%= link_to "课程概况" ,show_more_3_course_path(@course)%></li>
+            <li class="active"><%= link_to "课程特色" ,show_more_4_course_path(@course)%></li>
+          </ul>
+          <table class="table">
+
+            <h3> <b>作业、考核方式与成绩评定</b></h3><br/>
+            <%= @course.course_exam_details %>
+            <br/><br/>
+            <h3> <b>课程特点</b></h3>
+            <thead>
+            <tr>
+              <th>课程属性</th>
+              <th>属性描述</th>
+              <th>更新时间</th></tr>
+            </thead>
+            <tbody>
+            <tr class="active">
+              <td>课程持续时间</td>
+              <td><%= @course.course_time %></td>
+              <td>2016年秋季学期</td></tr>
+            <tr class="success">
+              <td>课程主讲老师</td>
+              <td><%= @course.teacher.name %></td>
+              <td>2016年秋季学期</td></tr>
+            <tr class="warning">
+              <td>课程是否有直播</td>
+              <td><%= @course.course_live %></td>
+              <td>2016年秋季学期</td></tr>
+            <tr class="danger">
+              <td>课程是否有作业</td>
+              <td><%= @course.course_homework %></td>
+              <td>2016年秋季学期</td></tr>
+            <tr class="success">
+              <td>课程是否有组队大作业</td>
+              <td><%= @course.course_teamwork %></td>
+              <td>2016年秋季学期</td></tr>
+            <tr class="active">
+              <td>课程评分</td>
+              <td><%= @course.course_score %></td>
+              <td>2016年秋季学期</td></tr>
+            </tbody>
+          </table>
+          <br/><br/> <br/><br/> <br/><br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

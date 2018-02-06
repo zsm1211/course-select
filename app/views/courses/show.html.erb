@@ -1,0 +1,29 @@
+<div class="col-md-offset-1 col-sm-10">
+<div class="panel panel-default ">
+  <div class="panel-body">
+    <h3 class="text-center"><%= @course.name %></h3>
+  </div>
+</div>
+</div>
+<div class="panel-group" id="accordion">
+<div class="col-md-offset-1 col-sm-10">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+    <span class="glyphicon glyphicon-align-justify" style="font-size:20px;color:primary">课程大纲</span>
+      </a>
+  </div>
+  <div id="collapseOne" class="panel-collapse collapse in">
+  <div class="panel-body">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="active"><%= link_to "课程详细信息" ,show_more_1_course_path(@course)%></li>
+      <li ><%= link_to "课程章节安排" ,show_more_2_course_path(@course)%></li>
+      <li><%= link_to "课程概况" ,show_more_3_course_path(@course)%></a></li>
+      <li><%= link_to "课程特色" ,show_more_4_course_path(@course)%></li>
+
+    </ul>
+  </div>
+  </div>
+</div>
+</div>
+</div>

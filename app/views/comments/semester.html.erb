@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-2">
+      <%= render "shared/sidenav" %>
+    </div>
+
+    <div class="col-sm-10">
+
+      <div class="panel panel-primary filterable">
+        <div class="panel-heading">
+          <% if teacher_logged_in? %><h3 class="panel-title">授课列表</h3><% end %>
+          <% if student_logged_in? %><h3 class="panel-title">已选课程</h3><% end %>
+        </div>
+
+        <div class="panel-body">
+          <table class="table table-responsive table-condensed table-hover">
+            <thead>
+            <tr>
+              <th>课程编号</th>
+              <th>课程名称</th>
+              <th>课时/学分</th>
+              <th>考试方式</th>
+              <th>主讲教师</th>
+              <th>选课情况</th>
+              <th>操作区</th>
+            </tr>
+
+            <tbody>
+            <% @course.each do |course| %>
+                <tr>
+
+                  <td><%= course.course_code %></td>
+                  <td><%= course.name %></td>
+                  <td><%= course.credit %></td>
+                  <td><%= course.exam_type %></td>
+                  <td><%= course.teacher.name %></td>
+
+                  <% if teacher_logged_in? %>
+                      <td><%= link_to "选课情况", selected_course_url(course), class: 'btn btn-xs btn-info' %></td>
+                      <td><%= link_to "查看结果", list_comments_path(course_id: course.id),  class: 'btn btn-xs btn-success' %></td>
+                  <% end %>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

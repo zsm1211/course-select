@@ -1,0 +1,172 @@
+
+<div class="container">
+
+  <div class="row">
+
+    <!-- 轮播 -->
+    <div class="col-md-8" style="padding-bottom: 10px;padding-top: 10px">
+    <div id="myCarousel" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= link_to image_tag("i.jpg",width: 1280 , height: 360), image_path("http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=261057&catid=340&Itemid=176")%>
+          <div class="carousel-caption">标题 1</div>
+        </div>
+        <div class="item">
+          <%= link_to image_tag("ii.jpg",width: 1280 , height: 360),  image_path("http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=260713&catid=408&Itemid=387")%>
+          <div class="carousel-caption">标题 2</div>
+        </div>
+        <div class="item">
+          <%= link_to image_tag("iii.jpg",width: 1280 , height: 360), image_path("http://news.ucas.ac.cn/index.php?option=com_content&view=article&id=260655&catid=340&Itemid=176")%>
+          <div class="carousel-caption">标题 3</div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    </div>
+    <!-- 选择 -->
+    <div class="col-md-4" style="padding-bottom: 10px;padding-top: 10px">
+    <div class="tabbable custom-tab ">
+      <ul class="nav nav-tabs">
+        <li class=""><a href="#created" data-toggle="tab"><strong>最新发布</strong></a></li>
+        <li class="active"><a href="#hits" data-toggle="tab"><strong>热点排行</strong></a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane  active" id="hits">
+          <ol>
+            <p></p>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn/index.php/2016xly1/往期专题/514-国科大2015年度十大新闻评选/189953-国科大2015年度十大新闻" title="国科大2015年度十大新闻评选揭晓">
+                国科大2015年度十大新闻评选揭晓				</a>
+              <small>JAN  18.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/kydd/191493-生物物理研究所发表光合作用超级复合物结构研究的重大成果" title="生物物理所发表光合作用超级复合物结构研究重大成果">
+                生物物理所发表光合作用超级复合物结构研究重大成果				</a>
+                <small>MAY  23.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/kydd/189970-揭密埃博拉，创造新细胞｜国科大医学院正副院长同时在顶级期刊cell上发布重要新成果" title="国科大医学院正副院长同时在顶级期刊发布重要新成果">
+                国科大医学院正副院长同时在顶级期刊发布重要新成果				</a>
+              <small>JAN  19.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/shuqi/517-notice/191258-xwrytz" title="中国科学院大学2016年暑期学校报名通知（校外人员）">
+                中国科学院大学2016年暑期学校报名通知（校外人员）				</a>
+              <small>MAY  11.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/gkrw/190785-专访王贻芳院士：青年人要敢与世界赛跑" title="专访王贻芳院士：青年人要敢与世界赛跑">
+                专访王贻芳院士：青年人要敢与世界赛跑				</a><small>APR  07.2016</small>
+            </li>
+          </ol>
+        </div>
+
+        <!--//m-pagebox:end-->
+        <div class="tab-pane" id="created">
+          <ol>
+            <p></p>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/xywh/261260-中国科学院成都教育基地-举办2017研究生迎新暨颁奖晚会" title="中国科学院成都教育基地举办2017研究生迎新暨颁奖晚会">
+                中国科学院成都教育基地举办2017研究生迎新暨颁奖晚会				</a>
+              <small>JAN  18.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/kydd/261257-光电所提出一种基于中红外光腔衰荡光谱的多组分气体同时测量技术" title="光电所提出一种基于中红外光腔衰荡光谱的多组分气体同时测量技术">
+                光电所提出一种基于中红外光腔衰荡光谱的多组分气体同时测量技术				</a>
+              <small>MAY  11.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/xywh/261256-2016级新疆博士班演绎《国科大亚克西》" title="2016级新疆博士班演绎《国科大亚克西》">
+                2016级新疆博士班演绎《国科大亚克西》				</a>
+              <small>JAN  19.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/kydd/261253-近代物理所等成功实现氧含量可控氧化石墨烯的制备" title="近代物理所等成功实现氧含量可控氧化石墨烯的制备">
+                近代物理所等成功实现氧含量可控氧化石墨烯的制备				</a>
+              <small>MAY  23.2016</small>
+            </li>
+            <li>
+              <a class="title-cut " href="http://news.ucas.ac.cn//index.php/kydd/261252-晚奥陶-早志留世扬子地台五峰－龙马溪页岩沉积环境受区域与全球因素控制" title="广州地化所发现晚奥陶—早志留世扬子地台五峰－龙马溪页岩沉积环境受区域与全球因素控制">
+                广州地化所发现晚奥陶龙马溪页岩沉积环境受区域与全球因素控制				</a>
+              <small>DEC  29.2016</small>
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="row">
+
+  <!-- 新闻 -->
+    <div class="col-md-7" style="padding-bottom: 10px;padding-top: 10px">
+      <div id="home-news">
+      <div class="panel">
+        <div class="panel-head s2">
+          <blockquote>
+            <h3 class="panel2-head-title"><strong><span>新闻聚焦</span></strong></h3>
+          </blockquote>
+        </div>
+        <div class="panel-body" style="height:350px;">
+          <ul class="home-news-list" id="xwjj">
+            <li>
+              <a title="国科大何裕建教授当选为怀柔区第五届人大常委" href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=261213&amp;catid=340&amp;Itemid=176" target="_blank">国科大何裕建教授当选为怀柔区第五届人大常委</a>
+              <p>2016年12月18-22日，北京市怀柔区第五届人民代表大会第一次会议在怀柔宽沟会议中心召开。大会选举产生了怀柔区第五届人大常委会主任、副主任、委员，区人民政府区长、副区长(全文......)</p>
+            </li>
+
+            <li>
+              <a title="国科大电子学院举办第二届科教融合交流会" href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=261158&amp;catid=369&amp;Itemid=206" target="_blank">国科大电子学院举办第二届科教融合交流会</a>
+              <p>2016年12月23日，中国科学院大学科教融合电子电气与通信工程学院第二届科教融合活动交流会议在声学所DPS大楼4层多功能厅会议室举办。国科大教务部部长张元勋、电子学院院长(全文......)</p>
+            </li>
+
+            <li>
+              <a title="国科大三位博导入选“2016年度中国留学人员创新创业50人榜单”" href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=261155&amp;catid=378&amp;Itemid=218" target="_blank">国科大三位博导入选“2016年度中国留学人员创新创业50人榜单”</a>
+              <p> 2016年12月22日，由教育部、科技部、中科院、国侨办等部门主办的“2016中国海外人才交流大会暨第18届中国留学人员广州科技交流会”（简称“...(全文......)</p>
+            </li>
+
+            <li>
+              <a title="国科大首届“科苑之星”评选大赛颁奖仪式举行" href="http://news.ucas.ac.cn/index.php?option=com_content&amp;view=article&amp;id=261125&amp;catid=340&amp;Itemid=176" target="_blank">国科大首届“科苑之星”评选大赛颁奖仪式举行</a>
+              <p>2016年12月19日，中国科学院第一届“科苑之星”评选大赛颁奖仪式在北京国家会议中心举行。中国科学院大学党委常务副书记、副校长董军社，中国疾病预防控制中心副主任、中国(全文......)</p>
+            </li>
+          </ul>
+        </div><!-- // panel-body:end -->
+
+      </div><!-- // panel:end -->
+    </div>
+    </div>
+
+  <!-- 快捷通道 -->
+    <div class="col-md-5" style="padding-bottom: 10px;padding-top: 10px">
+      <div id="home-qlink">
+    <blockquote>
+     <h3> <strong><span>快速通道</span></strong></h3>
+      </blockquote>
+      <div class="panel-body">
+        <%=image_tag "kslj.png", {usemap:"#Map5"}%>
+        <map name="Map5">
+          <area shape="rect" coords="6,8,94,227" href="http://service.ucas.ac.cn/" target="_blank" title="校园服务">
+          <area shape="rect" coords="108,9,334,100" href="http://sep.ucas.ac.cn/" target="_blank" title="信息门户">
+          <area shape="rect" coords="350,7,426,154" href="http://job.ucas.ac.cn/" target="_blank" title="就业信息">
+          <area shape="rect" coords="108,106,333,155" href="http://www.cas.cn/" target="_blank" title="中国科学院">
+          <area shape="rect" coords="110,170,235,224" href="http://lib.ucas.ac.cn/" target="_blank" title="图书馆">
+          <area shape="rect" coords="251,172,420,227" href="/site/229" target="_blank" title="校长信箱">
+        </map>
+      </div><!-- // panel-body:end -->
+  </div>
+    </div>
+  </div>
+
+  </div>

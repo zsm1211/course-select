@@ -1,0 +1,255 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <%= render "shared/sidenav" %>
+
+    </div>
+    <div class="col-sm-10">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">评估课程:<%=@comment.course.name%></h3>
+        </div>
+        <div class="panel-body" style="min-height: 450px">
+          <table class="table table-striped table-bordered table-advance table-hover">
+            当前评估课程：<label style="color:red;"><%=@comment.course.name%></label>&nbsp&nbsp&nbsp主讲教师：<lable style="color:red;"><%=@comment.course.teacher.name%></lable>&nbsp&nbsp&nbsp&nbsp所属院系：<lable style="color:red;"><%=@comment.course.teacher.department%></lable>
+            </br> </br>
+            <thead>
+            <tr>
+              <th class="active">序号</th>
+              <th class="active">评估内容</th>
+              <th class="active">评分</th>
+            </tr>
+            </thead>
+            <%= form_for @comment,html: {class: 'form-horizontal', role: 'form'} do |f| %>
+                <%= render 'shared/error_messages', :object => @comment %>
+                <tbody>
+                <tr>
+                  <th class="success">1</th>
+                  <th class="success">治学严整、言传身教</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_one, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_one, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_one, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_one, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_one, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">2</th>
+                  <th class="success">备课充分，讲课认真</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_two, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_two, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_two, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_two, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_two, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">3</th>
+                  <th class="success">仪装端庄，精神饱满 </th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_three, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_three, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_three, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_three, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_three, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">4</th>
+                  <th class="success">虚心听取意见，积极改进教学</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_four, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_four, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_four, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_four, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_four, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">5</th>
+                  <th class="success">无调课、停课、替讲现象</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_five, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_five, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_five, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_five, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_five, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">6</th>
+                  <th class="success">教学内容基本符合教学大纲要求</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_six, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_six, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_six, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_six, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_six, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">7</th>
+                  <th class="success">讲授思路清晰，概念清楚</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seven, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seven, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seven, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seven, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_seven, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">8</th>
+                  <th class="success">课程特色鲜明，内容取舍合理，组织严密，逻辑性强</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eight, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eight, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eight, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eight, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_eight, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">9</th>
+                  <th class="success">重点突出，难点讲解清楚</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_nine, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_nine, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_nine, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_nine, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_nine, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">10</th>
+                  <th class="success">拓展学生知识面，培养分析能力，引导创新</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_ten, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_ten, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_ten, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_ten, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_ten, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">11</th>
+                  <th class="success">因材施教，教学相长</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eleven, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eleven, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eleven, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_eleven, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_eleven, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">12</th>
+                  <th class="success">注重学生能力培养，合理配置作业</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_twelve, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_twelve, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_twelve, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_twelve, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_twelve, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">13</th>
+                  <th class="success">答疑</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_thirteen, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_thirteen, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_thirteen, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_thirteen, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_thirteen, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">14</th>
+                  <th class="success">课堂互动</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fourteen, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fourteen, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fourteen, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fourteen, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_fourteen, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">15</th>
+                  <th class="success">有启发，学习能力明显提高</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fifteen, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fifteen, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fifteen, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_fifteen, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_fifteen, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">16</th>
+                  <th class="success">教学有吸引力，学生能够掌握或理解大部分教学内容</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_sixteen, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_sixteen, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_sixteen, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_sixteen, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_sixteen, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="success">17</th>
+                  <th class="success">达到教学目的和要求</th>
+                  <td>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seventeen, 100 %><%= label_tag("优") %></span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seventeen, 80 %><%= label_tag("良") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seventeen, 60 %><%= label_tag("中") %> </span>
+                    <span style="margin-left: 10px"><%= f.radio_button :item_seventeen, 40 %><%= label_tag("差") %> </span>
+                    <span style="margin-left: 10px" ><%= f.radio_button :item_seventeen, 20 %><%= label_tag("极差") %> </span>
+                  </td>
+                </tr>
+                </tbody>
+                </table>
+                <div class="control-group">
+                  <h4>本课程的优点：</h4>
+                </div>
+                <div class="control-group">
+                  <div class="controls2">
+                    <%= f.text_area :comment_advantage, class: 'form-control' %>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <h4>本课程的缺点：</h4>
+                </div>
+                <div class="control-group">
+                  <div class="controls2">
+                    <%= f.text_area :comment_disadvantage, class: 'form-control' %>
+                  </div>
+                </div>
+                <h3></h3>
+                <div class="form-actions">
+                  <%if !@comment.commented? %>
+                      <%= f.submit "提交", :class => "btn btn-default btn-block" %>
+                      <%else%>
+                      <%= f.submit "修改", :class => "btn btn-default btn-block" %>
+                  <%end%>
+                      <%= link_to '取消', comments_path, :class => "btn btn-default btn-block" %>
+                </div>
+
+            <%end%>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var   getURL   =   window.location.href;
+  var   index     =   getURL.indexOf( "?reload=no ");
+  if   (  location.href.indexOf('#reloaded')==-1 && location.href.endsWith("edit") ){
+    location.href=location.href+"#reloaded"
+    location.reload()
+    setTimeout(function(){window.location.href=url},0)
+  }
+</script>

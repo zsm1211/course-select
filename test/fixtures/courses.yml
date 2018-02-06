@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  name: 计算机体系结构
+  course_code: 091M4001H
+  course_type: 专业核心课
+  teaching_type: 课堂讲授为主
+  course_code: 091M4001H
+  credit: 60/3.0
+  limit_num: ""
+  course_week: 第2-20周
+  course_time: 周一(9-11)
+  semester: Autumn2016
+  class_room: 教1-107
+  teaching_type: 课堂讲授为主
+  exam_type: 闭卷笔试
+  teacher: teacherhu
+  open: true
+
+# column: value
+#
+two:
+  course_code: "091M4002H"
+  name: "高级软件工程"
+  course_type: "专业核心课"
+  credit: "60/3.0"
+  limit_num: ""
+  course_week: "第2-20周"
+  course_time: "周五(2-4)"
+  semester: Autumn2016
+  class_room: "教1-107"
+  teaching_type: "课堂讲授为主"
+  exam_type: "闭卷笔试"
+  teacher: teacherluo
+  open: true
+#  column: value
+
+three:
+  course_code: "091M4003H"
+  name: "计算机网络"
+  course_type: "专业核心课"
+  credit: "60/3.0"
+  limit_num: ""
+  course_week: "第2-20周"
+  course_time: "周五(2-4)"
+  semester: Autumn2016
+  class_room: "教1-107"
+  teaching_type: "课堂讲授为主"
+  exam_type: "闭卷笔试"
+  teacher: teacherluo
+  open: true
+
+
